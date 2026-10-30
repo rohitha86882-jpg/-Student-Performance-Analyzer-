@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div>
+        <p class="eyebrow">STAY ORGANIZED</p>
+        <h1>Student Planner</h1>
+        <p class="subtitle">Plan your day, track your tasks, and stay on top of your studies.</p>
+      </div>
+      <div class="date" id="today"></div>
+    </header>
+
+    <section class="summary">
+      <article><span>Total tasks</span><strong id="total">0</strong></article>
+      <article><span>Completed</span><strong id="completed">0</strong></article>
+      <article><span>Pending</span><strong id="pending">0</strong></article>
+    </section>
+
+    <section class="panel">
+      <h2>Add a task</h2>
+      <form id="taskForm">
+        <input id="taskInput" type="text" placeholder="e.g. Complete Python assignment" required>
+        <select id="subject">
+          <option value="General">General</option>
+          <option>Python</option><option>Mathematics</option><option>Computer Science</option>
+          <option>English</option><option>Other</option>
+        </select>
+        <input id="dueDate" type="date" aria-label="Due date">
+        <button type="submit">Add task</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="list-heading">
+        <h2>My tasks</h2>
+        <select id="filter" aria-label="Filter tasks">
+          <option value="all">All tasks</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <ul id="taskList" class="task-list"></ul>
+      <p id="empty" class="empty">No tasks yet. Add your first task above!</p>
+    </section>
+    <footer>Student Planner · Made with HTML, CSS & JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

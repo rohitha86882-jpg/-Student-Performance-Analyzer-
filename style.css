@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+:root { font-family: Arial, sans-serif; color: #243047; background: #f3f6fc; }
+body { margin: 0; padding: 36px 16px; }
+.container { max-width: 850px; margin: auto; }
+header { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 26px; }
+.eyebrow { color: #6476c8; font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+h1 { margin: 6px 0; font-size: clamp(30px, 5vw, 42px); }
+.subtitle { color: #718096; margin: 8px 0 0; line-height: 1.5; }
+.date { color: #6476c8; font-weight: 700; white-space: nowrap; }
+.summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
+.summary article, .panel { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 5px 22px #2430470b; }
+.summary span { display: block; color: #7b879b; font-size: 13px; }
+.summary strong { display: block; font-size: 27px; margin-top: 8px; color: #5266bd; }
+.panel { margin-bottom: 18px; }
+h2 { font-size: 18px; margin: 0 0 16px; }
+form { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 10px; }
+input, select, button { min-width: 0; border: 1px solid #dce2ee; border-radius: 8px; padding: 11px 12px; font: inherit; background: white; }
+button { background: #596fc8; color: white; border: 0; font-weight: 700; cursor: pointer; }
+button:hover { background: #4559ad; }
+.list-heading { display: flex; justify-content: space-between; align-items: center; }
+.list-heading h2 { margin: 0; }
+.task-list { list-style: none; padding: 0; margin: 18px 0 0; }
+.task { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-top: 1px solid #edf0f6; }
+.task input { width: 18px; height: 18px; accent-color: #596fc8; }
+.task-info { flex: 1; min-width: 0; }
+.task-name { display: block; overflow-wrap: anywhere; font-weight: 600; }
+.task-meta { display: block; margin-top: 5px; color: #8490a3; font-size: 12px; }
+.done .task-name { text-decoration: line-through; color: #9aa3b2; }
+.delete { background: #fff0f0; color: #c14d58; padding: 8px 11px; }
+.delete:hover { background: #ffe1e1; }
+.empty { color: #8b95a6; text-align: center; padding: 20px 0 4px; }
+footer { color: #98a1b0; text-align: center; font-size: 12px; padding: 12px; }
+@media (max-width: 650px) {
+  header { display: block; } .date { margin-top: 15px; }
+  form { grid-template-columns: 1fr 1fr; }
+  form input:first-child { grid-column: 1 / -1; }
+  form button { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) { .summary { gap: 8px; } .summary article { padding: 14px; } }
